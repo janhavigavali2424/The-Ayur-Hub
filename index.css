@@ -123,7 +123,6 @@ footer {
 
     background-size: cover;
     background-position: center;
-
     min-height: 75vh;
 
     display: flex;
@@ -338,4 +337,3 @@ footer {
         background-size: 110%;
     }
 }
-
