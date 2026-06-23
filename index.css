@@ -122,7 +122,8 @@ footer {
         url("images/ayur1.avif");
 
     background-size: cover;
-    background-position: center;
+background-position: center;
+background-repeat: no-repeat;
 
     min-height: 75vh;
 
