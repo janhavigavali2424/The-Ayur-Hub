@@ -125,7 +125,7 @@ footer {
 background-position: center;
 background-repeat: no-repeat;
 
-    min-height: 75vh;
+   min-height: 100vh;
 
     display: flex;
     justify-content: center;
@@ -337,5 +337,12 @@ footer {
 
     to {
         background-size: 110%;
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        min-height: 70vh;
+        background-size: cover;
+        background-position: center;
     }
 }
