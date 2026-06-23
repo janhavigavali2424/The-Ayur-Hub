@@ -1,0 +1,216 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    line-height:1.6;
+    scroll-behavior:smooth;
+}
+
+/* HEADER */
+.header{
+    background:#d8b38c;
+    padding:20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    transition:0.3s ease;
+}
+
+.header:hover{
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.header nav a{
+    text-decoration:none;
+    color:black;
+    margin:0 12px;
+    font-weight:600;
+
+    transition:0.3s ease;
+}
+
+.header nav a:hover{
+    color:white;
+    transform:translateY(-2px);
+}
+
+/* HERO */
+.hero{
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("images/ayur3.jfif");
+
+    background-size:cover;
+    background-position:center;
+
+    height:70vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    animation: zoomBg 12s infinite alternate;
+}
+
+/* background zoom animation */
+@keyframes zoomBg{
+    from{
+        background-size:100%;
+    }
+    to{
+        background-size:110%;
+    }
+}
+
+/* HERO TEXT */
+.hero-content{
+    color:rgb(206, 192, 96);
+    padding:30px;
+    border-radius:10px;
+
+    animation: fadeUp 1.2s ease;
+}
+
+.hero-content h2{
+    font-size:3rem;
+    animation: slideDown 1s ease;
+}
+
+.hero-content p{
+    animation: fadeUp 1.5s ease;
+}
+
+/* ABOUT SECTION */
+.about-section{
+    padding:30px 0;
+}
+
+.about-section img{
+    border-radius:15px;
+    transition:0.4s ease;
+}
+
+.about-section img:hover{
+    transform:scale(1.03);
+    box-shadow:0 10px 25px rgba(185, 131, 131, 0.3);
+}
+
+/* TEXT HOVER */
+.about-section h2{
+    margin-bottom:20px;
+    transition:0.3s ease;
+}
+
+.about-section h2:hover{
+    color:#8b5a2b;
+    letter-spacing:1px;
+}
+
+/* MISSION VISION */
+.mission-vision{
+    background:#d6b073;
+    padding:60px 0;
+}
+
+.card-box{
+    background:rgb(236, 206, 115);
+    padding:30px;
+    border-radius:12px;
+
+    box-shadow:0 3px 10px rgba(198, 162, 77, 0.922);
+
+    transition:0.4s ease;
+}
+
+.card-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* WHY US */
+.why-us{
+    padding:80px 0;
+}
+
+.why-us h2{
+    text-align:center;
+    margin-bottom:40px;
+
+    animation: fadeUp 1s ease;
+}
+
+.feature-box{
+    padding:25px;
+    border-radius:12px;
+    background:#deb67f;
+
+    transition:0.4s ease;
+    cursor:pointer;
+}
+
+.feature-box:hover{
+    transform:translateY(-10px) scale(1.03);
+    background:rgb(201, 178, 102);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* CTA */
+.cta{
+    background:#8b5a2b;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.cta button{
+    transition:0.3s ease;
+}
+
+.cta button:hover{
+    transform:scale(1.1);
+    background:#2e7d32;
+}
+
+/* FOOTER */
+footer{
+    background:#2f2f2f;
+    color:white;
+    text-align:center;
+    padding:20px;
+
+    transition:0.3s ease;
+}
+
+footer:hover{
+    letter-spacing:2px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

@@ -1,0 +1,293 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+
+    font-family:cursive;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    ),
+    url("images/ayur9.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.header{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    background:
+    linear-gradient(
+        45deg,
+        #0b3d2e,
+        #145c42,
+        #2d6a4f
+    );
+
+    text-align:center;
+
+    padding:15px;
+
+    z-index:1000;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.25);
+}
+
+.header h2{
+    color:white;
+    margin-bottom:10px;
+}
+
+.header nav a{
+    color:white;
+    text-decoration:none;
+
+    margin:0 15px;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+.header nav a:hover{
+    color:#a8ff9f;
+}
+
+/* =========================
+   THANK YOU CARD
+========================= */
+
+.thankyou-container{
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding-top:100px;
+}
+
+.thankyou-card{
+
+    max-width:750px;
+    width:90%;
+
+    text-align:center;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    color:white;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.3);
+
+    animation:fadeUp 1.2s ease;
+}
+
+.thankyou-card:hover{
+
+    transform:translateY(-8px);
+
+    transition:.4s;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.35),
+    0 0 25px rgba(76,175,80,.4);
+}
+
+.icon{
+
+    font-size:80px;
+
+    margin-bottom:20px;
+
+    animation:float 3s ease-in-out infinite;
+}
+
+.thankyou-card h1{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+}
+
+.thankyou-card p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button-group{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.button-group .btn{
+
+    transition:.3s;
+}
+
+.button-group .btn:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
+}
+
+/* =========================
+   FLOATING LEAVES
+========================= */
+
+.leaf{
+
+    position:fixed;
+
+    top:-100px;
+
+    font-size:35px;
+
+    z-index:9999;
+
+    pointer-events:none;
+
+    animation:fall 12s linear infinite;
+}
+
+.leaf1{
+    left:10%;
+}
+
+.leaf2{
+    left:25%;
+    animation-delay:2s;
+}
+
+.leaf3{
+    left:45%;
+    animation-delay:4s;
+}
+
+.leaf4{
+    left:65%;
+    animation-delay:6s;
+}
+
+.leaf5{
+    left:85%;
+    animation-delay:8s;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes fall{
+
+    from{
+        transform:
+        translateY(-100px)
+        rotate(0deg);
+    }
+
+    to{
+        transform:
+        translateY(120vh)
+        rotate(360deg);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .header nav a{
+        margin:0 8px;
+        font-size:14px;
+    }
+
+    .thankyou-card{
+        padding:30px;
+    }
+
+    .thankyou-card h1{
+        font-size:38px;
+    }
+
+    .thankyou-card p{
+        font-size:17px;
+    }
+}

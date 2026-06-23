@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#d89a58;
+}
+
+.nav nav a{
+    margin:0 10px;
+    text-decoration:none;
+    color:black;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav nav a:hover{
+    color:white;
+}
+
+/* HERO */
+.hero{
+    height:80vh;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("images/ayur7.jfif");   
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    animation: zoom 12s infinite alternate;
+}
+
+@keyframes zoom{
+    from{ background-size:100%; }
+    to{ background-size:110%; }
+}
+
+.overlay{
+    color:white;
+    animation: fadeUp 1.2s ease;
+}
+
+.overlay h1{
+    font-size:3.2rem;
+}
+
+/* CONTACT SECTION */
+.contact-section{
+    padding:80px 20px;
+    background:#74b092;
+}
+
+/* FORM BOX */
+.contact-form{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
+    transition:0.4s ease;
+}
+
+.contact-form:hover{
+    transform:translateY(-5px);
+}
+
+/* INFO BOX */
+.info-box{
+    background:#a97c51;
+    color:white;
+    padding:40px;
+    border-radius:20px;
+
+    height:60%;
+
+    transition:0.4s ease;
+}
+
+.info-box:hover{
+    transform:scale(1.02);
+}
+
+/* INPUT FOCUS EFFECT */
+.form-control{
+    transition:0.3s;
+}
+
+.form-control:focus{
+    box-shadow:0 0 10px rgba(139,90,43,0.4);
+    border-color:#8b5a2b;
+}
+
+/* FOOTER */
+footer{
+    background:#b92e2e;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

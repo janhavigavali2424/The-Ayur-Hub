@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.45)
+        ),
+        url("images/ayur5.jfif");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+.header {
+    background: linear-gradient(50deg,
+            #0b3d2e,
+            #145c42,
+            #2d6a4f,
+            #0b3d2e);
+
+    background-size: 100% 100%;
+
+    animation: gradientMove 8s ease infinite;
+
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.header nav {
+    margin-top: 5px;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 14px;
+    position: relative;
+    transition: all .4s ease;
+}
+
+/* Underline animation */
+
+.header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #a8ff9f;
+
+    transition: .4s;
+}
+
+.header nav a:hover::after {
+    width: 100%;
+}
+
+.header nav a:hover {
+    color: #a8ff9f;
+}
+
+/* Main Form Card */
+.booking-container {
+    width: 100%;
+    max-width: 700px;
+
+    background: rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    color: white;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.3);
+
+    animation: slideUp 1s ease;
+}
+
+.booking-container:hover {
+    transform: translateY(-5px);
+
+    transition: 0.4s;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.35),
+        0 0 25px rgba(76,175,80,0.4);
+}
+
+.booking-container h1 {
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    font-size: 42px;
+
+    text-shadow: 0 3px 10px rgba(0,0,0,0.3);
+
+    animation: floating 3s infinite ease-in-out;
+}
+
+/* Labels */
+.form-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Inputs */
+.form-control {
+    border: none !important;
+
+    border-radius: 12px !important;
+
+    padding: 12px !important;
+
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    box-shadow:
+        0 0 15px rgba(76,175,80,0.6) !important;
+
+    transform: scale(1.02);
+}
+
+/* Submit Button */
+.btn-book {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            45deg,
+            #0b3d2e,
+            #2d6a4f
+        );
+
+    transition: 0.4s;
+}
+
+.btn-book:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    background:
+        linear-gradient(
+            45deg,
+            #145c42,
+            #4caf50
+        );
+
+    box-shadow:
+        0 8px 20px rgba(76,175,80,0.5);
+}
+
+/* Floating Leaves */
+.leaf {
+    position: fixed;
+    top: -100px;
+
+    font-size: 30px;
+
+    pointer-events: none;
+
+    animation: fall 12s linear infinite;
+
+    z-index: 9999;
+}
+
+.leaf1 {
+    left: 10%;
+}
+
+.leaf2 {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.leaf3 {
+    left: 45%;
+    animation-delay: 4s;
+}
+
+.leaf4 {
+    left: 65%;
+    animation-delay: 6s;
+}
+
+.leaf5 {
+    left: 85%;
+    animation-delay: 8s;
+}
+
+/* Animations */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fall {
+    from {
+        transform:
+            translateY(-100px)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateY(120vh)
+            rotate(360deg);
+    }
+}
+
+/* Mobile */
+@media(max-width:768px) {
+
+    .booking-container {
+        padding: 25px;
+    }
+
+    .booking-container h1 {
+        font-size: 30px;
+    }
+}
